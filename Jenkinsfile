@@ -12,7 +12,7 @@ node(label: 'master') {
         echo 'Compile and Unit Test Completed'
     }
 
-  /*  
+    
     stage('Static Analysis') {
    bat 'xcopy E:\\Users\\SARAN\\workspace\\Inventory %WORKSPACE%\\ /s /y'
              withSonarQubeEnv('SonarQube_Home') {
@@ -42,7 +42,7 @@ node(label: 'master') {
               echo 'Quality Gate Passed'
   
     }
-    */
+    
  
     stage('Package') {
         bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -U -DskipTests -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml clean package'
